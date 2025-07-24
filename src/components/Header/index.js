@@ -1,14 +1,17 @@
+import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import imgLogo from "./moneyy.png"
 
 function Header() {
     return(
         <header className={styles.header}>
-            <span>FinanceHubCnn</span>
-            <img src={imgLogo} alt="Logo FinanceHubCnn" className={styles.logo} />
+            <Link to="/">
+                <img src={imgLogo} alt="Logo FinanceHubCnn" className={styles.logo} />
+                <span>FinanceHubCnn</span>
+            </Link>
             <nav>
-                <a href="#">Home</a>
-                <a href="#">Assistir</a>
+                <Link to="/">Home</Link>
+                <Link to="/Watch">Assitir</Link>
             </nav>
         </header>
     );
