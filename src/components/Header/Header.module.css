@@ -15,20 +15,24 @@
 }
 
 .logo {
-  width: 40px;     
-  height: auto;
-  margin-left: -68rem;  
-  
+  width: 40px;
+  margin-right: -2.50rem;
+}
+
+.header > a {
+  display: flex;
+  align-items: center;
 }
 
 .header span {
     font-size: 2rem;
     color: #ece923;
     font-weight: 500;
+    padding-left: 40px;
 }
 
 .header a {
     text-decoration: none;
     color: #fff;
     padding-inline: 0.5rem;
-}
+} 
