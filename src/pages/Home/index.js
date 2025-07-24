@@ -17,7 +17,7 @@ function Home() {
             <Category category={category}>
               {filterCategory(index).map((video) => <Card id={video.id} key={video.id} />)}
             </Category>
-        )},
+        )}
       </Container>
       <Footer/>
     </>
