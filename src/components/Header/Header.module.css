@@ -22,6 +22,8 @@
 .header > a {
   display: flex;
   align-items: center;
+  display: block;
+  padding: 10px;
 }
 
 .header span {
@@ -36,3 +38,71 @@
     color: #fff;
     padding-inline: 0.5rem;
 } 
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.navLink svg {
+  margin-left: 0.3rem;
+  transition: color 0.3s ease;
+  color: inherit;
+}
+
+/* Estado de hover */
+.navLink:hover {
+  background-color: #f4f133;   /* cor de fundo ao passar o mouse */
+  color: #000;                  /* cor do texto ao passar o mouse */
+  cursor: pointer;
+}
+
+.navLink:hover svg {
+  color: #000;                  /* ícone acompanha a cor do texto */
+}
+
+.logoLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ece923;
+  padding: 0.5rem 1rem;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.logoLink::before {
+  content: "";
+  position: absolute;
+  top: 10;
+  left: 0;
+  width: 0;
+  height: 50px;
+  background-color: #ece923;
+  z-index: 0;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.logoLink:hover::before {
+  width: 100%;
+}
+
+.logoLink span,
+.logoLink img {
+  position: relative;
+  z-index: 1;
+}
+
+.logoLink:hover span,
+.logoLink:hover {
+  color: #000;
+}
