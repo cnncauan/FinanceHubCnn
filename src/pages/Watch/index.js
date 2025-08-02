@@ -5,6 +5,7 @@ import Footer from '../../components/Footer'
 import { useParams } from 'react-router-dom'
 import videos from '../../json/videos.json'
 import PageNotFOund from '../PageNotFound'
+import NotesCard from '../../components/NotesCard'
 
 function Watch(){
     const params = useParams()
@@ -29,6 +30,8 @@ function Watch(){
                         web-share" 
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>    
                     </iframe>
+                    
+                    <NotesCard/>
                 </section>
             </Container>
             <Footer />

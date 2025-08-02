@@ -9,6 +9,7 @@ function Card({ id }){
                     src={`https://img.youtube.com/vi/${id}/mqdefault.jpg`} 
                     alt='Capa'
                 />
+                
             </Link>
         </section>
     );
