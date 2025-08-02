@@ -1,0 +1,165 @@
+.notes {
+  max-width: 855px;
+  width: 90%;
+  margin: 0 auto;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 1px 30px  yellow, 0 1px 2px rgba(0, 0, 0, 0.24);
+  position: relative;
+  z-index: 999;
+}
+
+.saver-wrap {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.saver-wrap .notes-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #d1d3d6;
+  border-radius: 50px;
+  transition: 0.1s ease-in-out;
+}
+
+.saver-wrap .notes-dot.saved {
+  background-color: #66cc8f;
+  transition: 0.1s ease-in-out;
+  transition-delay: 2.1s;
+}
+
+.saver-wrap .rest {
+  transform: scale(0);
+  clip: rect(0, 30px, 30px, 15px);
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: calc(50% - 15px);
+  top: calc(50% - 15px);
+}
+
+.saver-wrap .rest.active {
+  -webkit-animation: animate 1.05s linear 2;
+  animation: animate 1.05s linear 2;
+}
+
+.saver-wrap .rest.active:after {
+  -webkit-animation: animate2 1.05s linear 2;
+  animation: animate2 1.05s linear 2;
+}
+
+.saver-wrap .rest:after {
+  transform: scale(0);
+  clip: rect(0, 30px, 30px, 15px);
+  content: "";
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  box-shadow: inset #d1d3d6 0 0 0 2px;
+}
+
+.title {
+  padding: 25px 30px;
+  padding-right: 60px;
+  font-weight: 600;
+  color: yellow;
+  font-size: 13px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.content {
+  padding: 10px 30px;
+  margin-bottom: 25px;
+  padding-bottom: 50px;
+  box-shadow: 0 1px 10px yellow, 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  font-weight: 400px;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.content span.bold {
+  font-weight: 700;
+}
+
+.content img {
+  width: 30%;
+  border-radius: 5px;
+  margin: 15px 5%;
+}
+
+.line {
+  width: 100%;
+  margin: 0 auto;
+  height: 1px;
+  background-color: yellow;
+}
+
+.comment {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 13px;
+  color: yellow;
+  position: relative;
+}
+
+.getImg {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  right: 140px;
+  padding-top: 5px;
+  color: yellow;
+  cursor: pointer;
+}
+
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: scale(1) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(220deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(220deg);
+  }
+}
+
+@-webkit-keyframes animate2 {
+  0% {
+    box-shadow: inset #d1d3d6 0 0 0 2px;
+    -webkit-transform: rotate(-140deg);
+  }
+  100% {
+    box-shadow: inset #d1d3d6 0 0 0 2px;
+    -webkit-transform: rotate(140deg);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    box-shadow: inset #d1d3d6 0 0 0 2px;
+    transform: rotate(-140deg);
+  }
+  100% {
+    box-shadow: inset #d1d3d6 0 0 0 2px;
+    transform: rotate(140deg);
+  }
+}
