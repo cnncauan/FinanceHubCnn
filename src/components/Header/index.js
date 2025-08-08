@@ -3,9 +3,8 @@ import styles from "./Header.module.css";
 import imgLogo from "./moneyy.png"
 
 import HomeIcon from '@mui/icons-material/Home';
-import MovieIcon from '@mui/icons-material/Movie';
 import SearchIcon from '@mui/icons-material/Search';
-
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 function Header() {
     return(
@@ -16,7 +15,8 @@ function Header() {
             </Link>
             <nav>
                 <Link to="/" className={styles.navLink}>Home<HomeIcon sx={{fontSize:20}} /></Link>
-                <Link to="/watch" className={styles.navLink}>Assitir<MovieIcon sx={{fontSize:20}} /></Link>
+                {/* <Link to="/watch" className={styles.navLink}>Assistir<MovieIcon sx={{fontSize:20}} /></Link> */}
+                <Link to="/favorite" className={styles.navLink}>Favoritos<FavoriteIcon sx={{fontSize:20}} /></Link>
                 <Link to="/search" className={styles.navLink}>Pesquisar<SearchIcon sx={{ fontSize: 20 }} /></Link>
             </nav>
         </header>
