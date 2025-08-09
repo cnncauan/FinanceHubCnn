@@ -1,0 +1,31 @@
+/* src/Components/CryptoNewsCarousel.module.css */
+
+.carouselContainer {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.carouselTrack {
+  display: flex;
+  width: max-content; /* Garante que o track tenha a largura total dos itens */
+  animation: scroll 40s linear infinite;
+  gap: 20px; /* Espaço entre os cards */
+}
+
+/* Pausar a animação ao passar o mouse */
+.carouselContainer:hover .carouselTrack {
+  animation-play-state: paused;
+}
+
+/* Animação de rolagem */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
