@@ -107,3 +107,56 @@
 .logoLink:hover {
   color: #000;
 }
+
+/* Media query para telas menores que 820px (ex: tablets) */
+@media (max-width: 820px) {
+  .header {
+    flex-direction: column; /* Empilha os itens verticalmente */
+    height: auto; /* Altura se ajusta ao conteúdo */
+    padding: 1rem 0;
+  }
+
+  .header > a {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+
+  .header span {
+    font-size: 1.5rem; /* Reduz o tamanho da fonte */
+    padding-left: 10px;
+  }
+
+  .logo {
+    width: 35px; /* Reduz o tamanho da logo */
+    margin-right: 0.5rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row; /* Mantém os links na horizontal */
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap; /* Permite que os links quebrem a linha se não couberem */
+  }
+
+  .navLink {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Media query para telas menores que 540px (ex: celulares) */
+@media (max-width: 540px) {
+  nav {
+    flex-direction: column; /* Empilha os links verticalmente */
+    align-items: center; /* Centraliza os links */
+  }
+
+  .navLink {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+}
+

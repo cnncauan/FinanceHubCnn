@@ -16,3 +16,24 @@
     font-size: 1rem;
     font-weight: 500;
 }
+/* Media query para telas menores que 768px (smartphones e tablets) */
+@media (max-width: 768px) {
+    .footer {
+        height: auto; /* A altura se ajusta ao conteúdo */
+        padding: 1rem;
+        flex-wrap: wrap; /* Permite que o conteúdo quebre para a próxima linha */
+    }
+
+    .footer h2 {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
+/* Media query para telas muito pequenas, abaixo de 480px */
+@media (max-width: 480px) {
+    .footer h2 {
+        font-size: 0.7rem; /* Reduz ainda mais a fonte para caber em telas estreitas */
+        padding: 0 5px; /* Adiciona um pequeno espaçamento lateral */
+    }
+}

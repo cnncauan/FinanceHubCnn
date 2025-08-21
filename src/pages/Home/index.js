@@ -5,11 +5,13 @@ import Category, {categories, filterCategory} from "../../components/Category";
 import Container from "../../components/Container";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import ScrollToTopButton from "../../components/ScrollTopButton";
 import CryptoNewsCarousel from "../../CryptoNewsCarousel"
 
 function Home() {
   return (
     <>
+      <ScrollToTopButton/>
       <Header/>
       <Banner image="home" />
       <Container>

@@ -5,13 +5,15 @@ import styles from "./Favorite.module.css"
 
 import VideoList from '../../components/VideoList'
 import { useFavoriteContext } from "../../context/favorites"
+import ScrollToTopButton from "../../components/ScrollTopButton"
 
 function Favorite() {
 
     const {favorite} = useFavoriteContext()
 
     return (
-        <>
+        <>  
+            <ScrollToTopButton/>
             <Header/>
             <Conteiner>
                 <section className={styles.favorite}>
