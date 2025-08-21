@@ -1,6 +1,14 @@
 .watch {
     height: 100%;
     padding-block: 8.68rem;
-    padding-top: 90px;
+    padding-top: 100px;
     
+}
+
+@media (max-width: 1024px) {
+    iframe {
+        width: 100%;
+        aspect-ratio: 16/9;
+        padding-top: 150px;
+    }
 }
