@@ -6,3 +6,18 @@
     flex-direction: column;
 }
 
+
+/* Media query para telas menores que 540px (ex: celulares) */
+@media (max-width: 540px) {
+  .search {
+    padding-top: 300px;
+  }
+
+}
+
+@media (max-width: 820px) {
+  .search {
+    padding-top: 260px;
+  }
+
+}
